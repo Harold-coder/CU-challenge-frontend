@@ -2,12 +2,12 @@ import React from "react"
 
 export default function Main() {
     return (
+        <>
+        <div className="main-header">
+                <h1 className="h1-title">General Leaderboard</h1>
+        </div>
         <main>
-            <div className="main-header">
-                <h1>General Leaderboard</h1>
-            </div>
         <div className="main-leaderboard">
-            <div className="ribbon"></div>
             <table>
                 <tr>
                     <td className="number">1</td>
@@ -57,9 +57,15 @@ export default function Main() {
                     <td className="name">Shaurya</td>
                     <td className="points">11</td>
                 </tr>
-                
+                <tr>
+                    <td className="number">8</td>
+                    <td><img className="picture" src={require("../images/harold.png")} alt="harold"></img></td>
+                    <td className="name">Shaurya</td>
+                    <td className="points">11</td>
+                </tr>
             </table>
         </div>
         </main>
+        </>
     )
 }
