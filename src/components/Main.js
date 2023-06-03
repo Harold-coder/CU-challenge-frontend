@@ -1,6 +1,17 @@
 import React from "react"
+import Player from "./Player"
+import data from "../data"
 
 export default function Main() {
+    const player = data.map(item => {
+        return (
+            <Player
+                key={item.id}
+                {...item}
+                
+            />
+        )
+    }) 
     return (
         <>
         <div className="main-header">
@@ -9,7 +20,7 @@ export default function Main() {
         <main>
         <div className="main-leaderboard">
             <table>
-                <tr>
+                {/* <tr>
                     <td className="number">1</td>
                     <td><img className="picture" src={require("../images/harold.png")} alt="harold"></img></td>
                     <td className="name">Harold</td>
@@ -62,7 +73,8 @@ export default function Main() {
                     <td><img className="picture" src={require("../images/harold.png")} alt="harold"></img></td>
                     <td className="name">Shaurya</td>
                     <td className="points">11</td>
-                </tr>
+                </tr> */}
+                {player}
             </table>
         </div>
         </main>
