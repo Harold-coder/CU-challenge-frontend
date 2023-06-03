@@ -51,6 +51,13 @@ export default function Main() {
                     <td className="name">Paarth</td>
                     <td className="points">13</td>
                 </tr>
+                <tr>
+                    <td className="number">8</td>
+                    <td><img className="picture" src={require("../images/harold.png")} alt="harold"></img></td>
+                    <td className="name">Shaurya</td>
+                    <td className="points">11</td>
+                </tr>
+                
             </table>
         </div>
         </main>
