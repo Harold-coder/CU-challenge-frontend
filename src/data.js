@@ -1,4 +1,4 @@
-export default [
+const data = [
     {
         id: 1,
         number: 1,
@@ -28,31 +28,34 @@ export default [
         points: 20,
     },
     {
-        id: 1,
+        id: 5,
         number: 5,
         picture: "sameer.png",
         name: "Sameer",
         points: 11,
     },
     {
-        id: 1,
+        id: 6,
         number: 6,
         picture: "paarth.png",
         name: "Paarth",
         points: 12,
     },
     {
-        id: 1,
+        id: 7,
         number: 7,
         picture: "harold.png",
         name: "Harold",
         points: 25,
     },
     {
-        id: 1,
+        id: 8,
         number: 8,
         picture: "harold.png",
         name: "Harold",
         points: 25,
     }
 ]
+
+
+export default data;
