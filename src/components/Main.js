@@ -1,9 +1,11 @@
 import React from "react"
 import Player from "./Player"
 import data from "../data"
+import dataweek1 from "../dataweek1"
+import dataweek2 from "../dataweek2"
 
-export default function Main() {
-    const player = data.map(item => {
+export default function Main(props) {
+    const player_general = data.map(item => {
         return (
             <Player
                 key={item.id}
@@ -11,73 +13,62 @@ export default function Main() {
                 
             />
         )
-    }) 
+    })
+
+    const player_week1 = dataweek1.map(item => {
+        return (
+            <Player
+                key={item.id}
+                {...item}
+                
+            />
+        )
+    })
+
+    const player_week2 = dataweek2.map(item => {
+        return (
+            <Player
+                key={item.id}
+                {...item}
+                
+            />
+        )
+    })
+
+    const [week, setWeek] = React.useState(1)
+  
+    const handleOpen = () => {
+        let updated = (week + 1)%3
+        if (updated === 0){
+            updated = 1
+        }
+        setWeek(updated);
+    };
+    let description
+    if (week === 1){
+        description = "2k Run"
+    } else if (week === 2){
+        description = "10k Cycle"
+    }
+
     return (
-        <>
-        <div className="main-header">
-                <h1 className="h1-title">General Leaderboard</h1>
+        <div className="main-body-inside">
+            {
+                props.dropdown === "false" && <div className="main-header">
+                <h1 className="h1-title">{props.title}</h1> </div>
+            }
+            {
+                props.dropdown === "true" && <div className="main-header"> <button onClick={handleOpen} className="dd-btn">{description}</button></div>
+            }
+            <main>
+            <div className="main-leaderboard">
+                <table>
+                    {props.dropdown === "false" && player_general}
+                    {props.dropdown === "true" && week === 1 && player_week1}
+                    {props.dropdown === "true" && week === 2 && player_week2}
+                </table>
+            </div>
+            </main>
         </div>
-        <main>
-        <div className="main-leaderboard">
-            <table>
-                {/* <tr>
-                    <td className="number">1</td>
-                    <td><img className="picture" src={require("../images/harold.png")} alt="harold"></img></td>
-                    <td className="name">Harold</td>
-                    <td className="points">25 <img className="gold-medal" src="https://github.com/malunaridev/Challenges-iCodeThis/blob/master/4-leaderboard/assets/gold-medal.png?raw=true" alt="gold medal"/></td>
-                </tr>
-                <tr>
-                    <td className="number">2</td>
-                    <td><img className="picture" src={require("../images/harold.png")} alt="harold"></img></td>
-                    <td className="name">Jacob</td>
-                    <td className="points">21</td>
-                </tr>
-                <tr>
-                    <td className="number">3</td>
-                    <td><img className="picture" src={require("../images/harold.png")} alt="harold"></img></td>
-                    <td className="name">Tommy</td>
-                    <td className="points">20</td>
-                </tr>
-                <tr>
-                    <td className="number">4</td>
-                    <td><img className="picture" src={require("../images/harold.png")} alt="harold"></img></td>
-                    <td className="name">Frankie</td>
-                    <td className="points">19</td>
-                </tr>
-                <tr>
-                    <td className="number">5</td>
-                    <td><img className="picture" src={require("../images/harold.png")} alt="harold"></img></td>
-                    <td className="name">Zach</td>
-                    <td className="points">17</td>
-                </tr>
-                <tr>
-                    <td className="number">6</td>
-                    <td><img className="picture" src={require("../images/harold.png")} alt="harold"></img></td>
-                    <td className="name">Goadie</td>
-                    <td className="points">15</td>
-                </tr>
-                <tr>
-                    <td className="number">7</td>
-                    <td><img className="picture" src={require("../images/harold.png")} alt="harold"></img></td>
-                    <td className="name">Paarth</td>
-                    <td className="points">13</td>
-                </tr>
-                <tr>
-                    <td className="number">8</td>
-                    <td><img className="picture" src={require("../images/harold.png")} alt="harold"></img></td>
-                    <td className="name">Shaurya</td>
-                    <td className="points">11</td>
-                </tr>
-                <tr>
-                    <td className="number">8</td>
-                    <td><img className="picture" src={require("../images/harold.png")} alt="harold"></img></td>
-                    <td className="name">Shaurya</td>
-                    <td className="points">11</td>
-                </tr> */}
-                {player}
-            </table>
-        </div>
-        </main>
-        </>
     )
 }

@@ -1,94 +1,94 @@
-const data = [
+const dataweek2 = [
     {
         id: 1,
         number: 1,
         picture: "harold.png",
         name: "Harold",
-        points: 25,
+        points: "6:45",
     },
     {
         id: 2,
         number: 2,
         picture: "laszlo.png",
         name: "Laszlo",
-        points: 20,
+        points: "6:51",
     },
     {
         id: 3,
         number: 3,
         picture: "goadie.png",
         name: "Goadie",
-        points: 16,
+        points: "7:26",
     },
     {
         id: 4,
         number: 4,
         picture: "andy.png",
         name: "Andy",
-        points: 13,
+        points: "7:38",
     },
     {
         id: 5,
         number: 5,
         picture: "yuzpe.png",
         name: "Yuzpe",
-        points: 11,
+        points: "7:40",
     },
     {
         id: 6,
         number: 6,
         picture: "frankie.png",
         name: "Frankie",
-        points: 10,
+        points: "7:47",
     },
     {
         id: 7,
         number: 7,
         picture: "ryan.png",
         name: "Ryan",
-        points: 9,
+        points: "7:50",
     },
     {
         id: 8,
         number: 8,
         picture: "rutu.png",
         name: "Rutu",
-        points: 8,
+        points: "7:57",
     },
     {
         id: 9,
         number: 9,
         picture: "sameer.png",
         name: "Sameer",
-        points: 7,
+        points: "7:58",
     },
     {
         id: 10,
         number: 10,
         picture: "zach.png",
         name: "Zach",
-        points: 6,
+        points: "8:00",
     },
     {
         id: 11,
         number: 11,
         picture: "paarth.png",
         name: "Paarth",
-        points: 5,
+        points: "8:02",
     },
     {
         id: 12,
         number: 12,
         picture: "jacob.png",
         name: "Jacob",
-        points: 4,
+        points: "8:33",
     },
     {
         id: 13,
         number: 13,
         picture: "gonzo.png",
         name: "Gonzo",
-        points: 3,
+        points: "8:40",
     },
     {
         id: 14,
@@ -123,9 +123,9 @@ const data = [
         number: 18,
         picture: "sherif.png",
         name: "Sherif",
-        points: 0,
+        points: "∞",
     }
 ]
 
 
-export default data;
+export default dataweek2;

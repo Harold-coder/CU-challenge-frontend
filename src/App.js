@@ -1,3 +1,4 @@
+import { programSupportsExtensions } from '@solana/spl-token';
 import './App.css';
 import Main from './components/Main';
 import Navbar from './components/Navbar';
@@ -7,7 +8,10 @@ function App() {
   return (
     <div className = "app">
       <Navbar/>
-      <Main/>
+      <div className='main-body'>
+        <Main title="General Leaderboard" dropdown="false" />
+        <Main title="other" dropdown="true"/>
+      </div>
     </div>
   );
 }
