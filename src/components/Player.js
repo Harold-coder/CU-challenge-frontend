@@ -2,7 +2,7 @@ import React from "react"
 
 export default function Player(props) {
     let showImage
-    if (props.number == 1){
+    if (props.number === 1){
         showImage = 1;
     }
     return (
